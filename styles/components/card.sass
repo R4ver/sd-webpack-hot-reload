@@ -1,0 +1,16 @@
+.main-loop 
+    padding: 0
+
+    .card
+        margin: 16px 16px
+        width: 400px
+        +BoxShadow(1)
+
+.main-loop .card-image 
+    img
+        object-fit: cover;
+        object-position: center center;
+        transition: all 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        &:hover
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+            transform: scale(1.02)

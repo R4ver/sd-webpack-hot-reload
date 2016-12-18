@@ -1,0 +1,43 @@
+$pageLoaderSize: 42px
+
+.pageloader
+    display: block
+    position: fixed
+    top: 50px
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 999
+    background: linear-gradient(135deg, #514a9d 0%,#70b0e0 100%)
+    transition: all .35s ease-out
+
+    &.is-loading
+        opacity: 1
+
+        &::after 
+            animation: spinAround 500ms infinite linear
+            border: 2px solid #dbdbdb
+            border-radius: 290486px
+            border-right-color: transparent
+            border-top-color: transparent
+            content: ""
+            display: block
+            height: $pageLoaderSize
+            position: relative
+            width: $pageLoaderSize
+            left: 50%
+            margin-left: -8px
+            margin-top: -8px
+            position: absolute
+            top: 50%
+            position: absolute !important
+
+
+    &.is-complete
+        opacity: 0
+        z-index: -999
+
+    & a //Loading button
+        top: 50%
+        left: 50%
+        transform: translate(50%, 50%)
